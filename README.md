@@ -56,7 +56,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 #### Advanced Queries
 - Nested subqueries, window functions, CTEs, and performance optimization.
 
-### EDA
+### Data Exploration
 ```sql
 select count (*) from spotify
 select count (distinct artist) FROM spotify
