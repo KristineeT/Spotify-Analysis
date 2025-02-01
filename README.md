@@ -61,10 +61,42 @@ After the data is inserted, various SQL queries can be written to explore and an
 
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
+   ```sql
+SELECT * FROM spotify
+WHERE stream > 1000000000;
+```
+
 2. List all albums along with their respective artists.
-3. Get the total number of comments for tracks where `licensed = TRUE`.
-4. Find all tracks that belong to the album type `single`.
+```sql
+SELECT DISTINCT album, artist FROM spotify
+ORDER BY 1;
+```
+
+3. Get the total number of comments for tracks where licensed = TRUE.
+```sql
+SELECT DISTINCT licensed FROM spotify
+
+SELECT * FROM spotify
+WHERE licensed = 'true'
+SELECT SUM (comments) as total_comments FROM spotify
+WHERE licensed = 'true';
+```
+
+4. Find all tracks that belong to the album type single.
+```sql
+SELECT * FROM spotify
+WHERE album_type = 'single';
+```
+
 5. Count the total number of tracks by each artist.
+```sql
+SELECT 
+artist,
+COUNT (*) as total_number_of_songs
+FROM spotify
+GROUP BY artist
+ORDER BY 2 desc;
+```
 
 ### Medium Level
 1. Calculate the average danceability of tracks in each album.
