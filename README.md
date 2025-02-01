@@ -61,7 +61,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
-
+```sql
 SELECT * FROM spotify
 WHERE stream > 1000000000;
 ```
