@@ -57,11 +57,11 @@ After the data is inserted, various SQL queries can be written to explore and an
 - Nested subqueries, window functions, CTEs, and performance optimization.
 
 
-## 15 Practice Questions
+## 15 DataDriven Questions
 
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
-   ```sql
+
 SELECT * FROM spotify
 WHERE stream > 1000000000;
 ```
