@@ -56,6 +56,26 @@ After the data is inserted, various SQL queries can be written to explore and an
 #### Advanced Queries
 - Nested subqueries, window functions, CTEs, and performance optimization.
 
+### EDA
+```sql
+select count (*) from spotify
+select count (distinct artist) FROM spotify
+select count (distinct album) FROM spotify
+select distinct album_type FROM spotify
+select min(duration_min) FROM spotify
+select * FROM spotify
+WHERE duration_min = 0 
+
+DELETE FROM spotify
+WHERE duration_min = 0;
+SELECT * FROM spotify
+WHERE duration_min = 0;
+
+SELECT DISTINCT channel FROM spotify;
+
+SELECT DISTINCT most_played_on FROM spotify;
+
+```
 
 ## 15 DataDriven Questions
 
